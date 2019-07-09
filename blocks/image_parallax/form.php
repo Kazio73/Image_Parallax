@@ -20,7 +20,7 @@ if (!isset($height) || !isset($speed) || !isset($alt) ){
   <label class="control-label"><?=t('Image File')?></label>
   <?=$al->image('fID','fID', t('Image File'), $imageFile);?>
 </div>
- <?php echo ('Wartosc height:'.$height); ?>
+
 <div class="form-group">
   <label class="control-label" for="height"><?=t('Parallx block height in vh (20 - 100 %)')?></label>
   <input type="number" class="form-control" name="height" min="10" max="100" value="<?= $height?>">
