@@ -4,16 +4,14 @@ use Concrete\Core\Package\Package;
 use Concrete\Core\Block\BlockType\BlockType;
 use Database;
 
-
-defined('C5_EXECUTE') or die (_("Access Denided."));
-
+defined('C5_EXECUTE') or die(("Access Denied."));;
 
 class Controller extends Package
 {
 
   protected $pkgHandle = 'image_parallax';
   protected $appVersionRequired = '8.5.1';
-  protected $pkgVersion = '1.0' ;
+  protected $pkgVersion = '0.9' ;
 
   public function getPackageDescription()
   {

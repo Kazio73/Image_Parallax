@@ -6,8 +6,7 @@ use \Concrete\Core\Block\BlockController;
 use Concrete\Core\Asset\AssetList;
 use Concrete\Core\Asset\Asset;
 
-defined('C5_EXECUTE') or die(_("Access Denided."));
-
+defined('C5_EXECUTE') or die(("Access Denied."));
 
 class Controller extends BlockController
 {
