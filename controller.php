@@ -4,7 +4,7 @@ use Concrete\Core\Package\Package;
 use Concrete\Core\Block\BlockType\BlockType;
 use Database;
 
-defined('C5_EXECUTE') or die(("Access Denied."));;
+defined('C5_EXECUTE') or die(_("Access Denied."));
 
 class Controller extends Package
 {
