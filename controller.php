@@ -11,7 +11,7 @@ class Controller extends Package
 
   protected $pkgHandle = 'image_parallax';
   protected $appVersionRequired = '8.5.1';
-  protected $pkgVersion = '0.9.1' ;
+  protected $pkgVersion = '0.9.2' ;
 
   public function getPackageDescription()
   {
