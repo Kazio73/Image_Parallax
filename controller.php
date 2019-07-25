@@ -10,7 +10,7 @@ class Controller extends Package
 {
   protected $pkgHandle = 'image_parallax';
   protected $appVersionRequired = '8.5.1';
-  protected $pkgVersion = '0.9.2' ;
+  protected $pkgVersion = '0.9.3' ;
   public function getPackageDescription()
   {
     return t('Adds simple image parallax block to your web site project.');
