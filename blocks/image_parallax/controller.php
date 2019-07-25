@@ -1,13 +1,8 @@
 <?php
 namespace Concrete\Package\ImageParallax\Block\ImageParallax;
-
-use Core;
-use \Concrete\Core\Block\BlockController;
-use Concrete\Core\Asset\AssetList;
-use Concrete\Core\Asset\Asset;
-
-defined('C5_EXECUTE') or die(_("Access Denided."));
-
+use Concrete\Core\File\File;
+use Concrete\Core\Page\Page;
+use Concrete\Core\Block\BlockController;
 
 class Controller extends BlockController
 {
@@ -30,7 +25,6 @@ class Controller extends BlockController
         return t('Image Parallax');
     }
 
-
     public function on_start()
     {
       $al = \Concrete\Core\Asset\AssetList::getInstance();
@@ -47,7 +41,11 @@ class Controller extends BlockController
         array('javascript', 'jsparallax'),
         array('css', 'jsparallax')
       ));
+
+       $this->set('app', $this->app);
+
     }
+
 
   public function registerViewAssets ($outputContent = '')
     // public function view()
@@ -55,9 +53,9 @@ class Controller extends BlockController
     $this->requireAsset('jsparallax');
   }
 
-  public function validate($data)
-  {
-      $e = Core::make('error');
+ public function validate($data) {
+         $e = $this->app->make('error');
+
       if ($data['height'] < 20 || $data['height'] > 100) {
           $e->add(t('You must put the number between 20 and 100.'));
       }
